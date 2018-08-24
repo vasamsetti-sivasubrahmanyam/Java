@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="address" class="com.capgemini.beans.Address">
+<property name="city" value="pune"></property>
+</bean>
+<bean id ="address1" class="com.capgemini.beans.Address">
+<property name="city" value="puone"></property>
+</bean>
+<bean id="employee" class="com.capgemini.beans.Employee">
+<property name="empNum" value="100"></property>
+<property name="address">
+<list>
+<ref bean="address"/>
+<ref bean="address1"/>
+</list>
+</property>
+<!-- <property name="empName" value="Hai"></property>
+<property name="address" ref="address"></property> -->
+</bean>
+
+</beans>
